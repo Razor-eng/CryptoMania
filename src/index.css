@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap");
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+@media only screen and (max-width: 468px) {
+  .perpage {
+    display: none;
+  }
+  .searchform {
+    width: 100%;
+    margin-left: 2px;
+  }
+  .logo {
+    top: 0;
+  }
+  .page {
+    font-size: 8px;
+    width: 92%;
+  }
+  .crypto {
+    font-size: smaller;
+  }
+}
+@media only screen and (max-width: 593px) {
+  .searchTag {
+    width: 100%;
+  }
+  .searchIcon {
+    position: relative;
+    left: -25px;
+  }
+  .filter-in {
+    display: none;
+  }
+  .footer {
+    display: none;
+  }
+  .Trendimage {
+    top: 8px;
+    right: -12px;
+    width: 33%;
+  }
+  .trending {
+    width: 90%;
+  }
+  .trending h3 {
+    font-size: smaller;
+  }
+  .trendsmall {
+    display: none;
+  }
+}
