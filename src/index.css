@@ -12,6 +12,14 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+@media only screen and (max-width: 987px) {
+  .cryptodetails {
+    flex-direction: column;
+  }
+  .cryptoleft {
+    display: none;
+  }
+}
 @media only screen and (max-width: 468px) {
   .perpage {
     display: none;

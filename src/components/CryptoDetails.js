@@ -39,11 +39,12 @@ const CryptoDetails = () => {
             <div onClick={(e) => e.stopPropagation()} className='w-[65%] h-[75%] bg-gray-300 bg-opacity-75 rounded-lg text-white relative'>
                 {
                     data ?
-                        <div className=' flex items-center justify-between h-full w-full p-4'>
+                        <div className=' flex items-center justify-between h-full w-full p-4 cryptodetails'>
                             <div className=' flex flex-col w-[45%] h-full pr-2 '>
+
                                 <div className=' flex w-full items-center'>
                                     <img className=' w-[3rem] h-[3rem] mx-1.5' src={data.image.large} alt={data.id} />
-                                    <h1 className=' text-xl capitalize font-medium'>{data.name}</h1>
+                                    <h1 className='cryptoleft text-xl capitalize font-medium'>{data.name}</h1>
                                     <span className=' text-sm py-0.5 px-2.5 ml-2 bg-cyan text-cyan bg-opacity-25 rounded uppercase'>{data.symbol}</span>
                                 </div>
 
@@ -68,7 +69,7 @@ const CryptoDetails = () => {
                                     </div>
                                 </div>
 
-                                <div className=' flex w-full mt-4 justify-between'>
+                                <div className=' flex w-full mt-4 cryptoleft justify-between'>
                                     <div className=' flex flex-col'>
                                         <span className=' text-sm capitalize text-gray-100'>Market Cap</span>
                                         <h2 className=' text-base font-bold'>
@@ -91,7 +92,7 @@ const CryptoDetails = () => {
                                     </div>
                                 </div>
 
-                                <div className=' flex flex-col w-full mt-4 justify-between'>
+                                <div className=' flex flex-col w-full mt-4  justify-between'>
                                     <span className=' text-sm capitalize text-gray-100'>total volume</span>
                                     <h2 className=' text-base font-bold'>
                                         {new Intl.NumberFormat("en-IN", {
@@ -110,7 +111,7 @@ const CryptoDetails = () => {
                                     />
                                 </div>
 
-                                <div className=' flex w-full mt-4 justify-between'>
+                                <div className=' flex w-full mt-4 cryptoleft justify-between'>
                                     <div className=' flex flex-col'>
                                         <span className=' text-sm capitalize text-gray-100'>Low 24H</span>
                                         <h2 className=' text-base font-bold'>
@@ -133,7 +134,7 @@ const CryptoDetails = () => {
                                     </div>
                                 </div>
 
-                                <div className=' flex w-full mt-4 justify-between'>
+                                <div className=' flex w-full mt-4 cryptoleft justify-between'>
                                     <div className=' flex flex-col'>
                                         <span className=' text-sm capitalize text-gray-100'>max supply</span>
                                         <h2 className=' text-base font-bold'>
@@ -156,7 +157,7 @@ const CryptoDetails = () => {
                                     </div>
                                 </div>
 
-                                <div className=' flex w-full mt-4 justify-between'>
+                                <div className=' flex w-full mt-4 cryptoleft justify-between'>
                                     <div className="flex flex-col">
                                         <a target='_blank' rel='noreferrer' className=' text-sm bg-gray-200 text-gray-100 px-1.5 py-0.5 my-1 rounded' href={data?.links?.homepage[0]}>{data?.links?.homepage[0].substring(0, 30)}</a>
                                         <a target='_blank' rel='noreferrer' className=' text-sm bg-gray-200 text-gray-100 px-1.5 py-0.5 my-1 rounded' href={data?.links?.blockchain_site[0]}>{data?.links?.blockchain_site[0].substring(0, 30)}</a>
@@ -193,14 +194,14 @@ const CryptoDetails = () => {
                             <div className=' flex flex-col w-[55%] h-full pl-3'>
                                 <Chart id={data.id} />
 
-                                <div className=' flex flex-col mt-4'>
+                                <div className='cryptoleft flex flex-col mt-4'>
                                     <h3 className=' text-white py-1'><span className=' text-gray-100 capitalize mr-1'>market cap rank:</span>{data.market_cap_rank}</h3>
                                     <h3 className=' text-white py-1'><span className=' text-gray-100 capitalize mr-1'>coinGecko rank:</span>{data.coingecko_rank}</h3>
                                     <h3 className=' text-white py-1'><span className=' text-gray-100 capitalize mr-1'>coinGecko score:</span>{data.coingecko_score}</h3>
                                 </div>
                             </div>
 
-                            <div className=' absolute bottom-8 right-8 flex items-center'>
+                            <div className=' absolute cryptoleft bottom-8 right-8 flex items-center'>
                                 {
                                     data.links.repos_url.github[0] &&
                                     <a className=' text-lg px-1' target='_blank' rel='noreferrer' href={data.links.repos_url.github[0]}>
